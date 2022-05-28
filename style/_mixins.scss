@@ -1,0 +1,27 @@
+// Typography
+@mixin font-flex-reg {
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: $regular;
+}
+
+@mixin font-flex-ital {
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: $regular;
+    font-style: italic;
+}
+
+@mixin font-slab-bold {
+    font-family: 'Roboto Slab', serif;
+    font-weight: $bold;
+}
+
+// General button styling
+@mixin btn {
+    color: $black;
+    display: inline-block;
+    padding: $size*4 $size*6;
+    @include font-slab-bold;
+    font-size: 1.25rem;
+    width: max-content;
+    text-align: center;
+}

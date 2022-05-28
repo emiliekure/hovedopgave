@@ -1,0 +1,16 @@
+// Typography
+$regular: 400;
+$bold: 800;
+
+// Colours
+$black: #181818;
+$white: #E7E7E7;
+$white6: transparentize($white, 0.06);
+
+$orange: #F09C1F;
+$green: #66BB6A;
+
+// Layout
+$size: 4px;
+$small-margin: minmax(40px, 1fr);
+$large-margin: minmax(80px, 1fr);

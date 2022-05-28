@@ -1,0 +1,1180 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;800&family=Roboto+Slab:wght@400;800&display=swap");
+@import url("https://use.typekit.net/qno8cjm.css");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*
+2. Remove default margin and padding
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+
+/*
+Typographic tweaks!
+4. Add accessible line-height
+5. Improve text rendering
+*/
+body {
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+}
+
+/*
+7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+9. Remove default link colour
+*/
+* a {
+  color: inherit;
+  text-decoration: none;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #E7E7E7;
+  color: #181818;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(40px, 1fr) minmax(min-content, 70ch) minmax(40px, 1fr);
+      grid-template-columns: minmax(40px, 1fr) minmax(-webkit-min-content, 70ch) minmax(40px, 1fr);
+      grid-template-columns: minmax(40px, 1fr) minmax(min-content, 70ch) minmax(40px, 1fr);
+  -ms-grid-rows: auto min-content;
+      grid-template-rows: auto -webkit-min-content;
+      grid-template-rows: auto min-content;
+}
+
+body .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-column: 1 / -1;
+}
+
+body .primary-btn {
+  color: #181818;
+  display: inline-block;
+  padding: 16px 24px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  background-color: #F09C1F;
+}
+
+body .secondary-btn {
+  color: #181818;
+  display: inline-block;
+  padding: 16px 24px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  background-color: #66BB6A;
+}
+
+body h1 {
+  font-family: mascot-mvb-rough-1, sans-serif;
+  font-size: 3rem;
+  font-weight: normal;
+  color: #F09C1F;
+  text-align: center;
+  grid-column: 1 / -1;
+  margin-top: 40px;
+}
+
+body h2 {
+  font-family: mascot-mvb, sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+body h3 {
+  font-family: mascot-mvb, sans-serif;
+  font-size: 1.75rem;
+  font-weight: normal;
+}
+
+body h4 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+body .sub,
+body .desc {
+  font-family: 'Roboto Flex', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+body p {
+  font-family: 'Roboto Flex', sans-serif;
+  font-weight: 400;
+  max-width: 70ch;
+}
+
+body .content {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  margin: 40px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+body header {
+  background-color: rgba(231, 231, 231, 0.94);
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+  font-size: 2rem;
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: inherit;
+      grid-template-columns: inherit;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+body header nav {
+  grid-column: 2 / -2;
+  margin: 32px 0;
+}
+
+body header nav #nav-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body header nav #nav-icons #nav-logo img {
+  width: auto;
+  height: 48px;
+}
+
+body header nav #nav-icons #mobile-icons #opennav, body header nav #nav-icons #mobile-icons #closenav {
+  cursor: pointer;
+  color: #F09C1F;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 48px;
+  height: 48px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body header nav #nav-icons #mobile-icons #opennav svg, body header nav #nav-icons #mobile-icons #closenav svg {
+  width: 100%;
+  height: 100%;
+}
+
+body header nav #nav-icons #mobile-icons #closenav {
+  height: 0;
+}
+
+body header nav #nav-links {
+  font-weight: 800;
+  height: 0;
+  overflow-y: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 100%;
+}
+
+body header nav #nav-links ul {
+  list-style: none;
+  padding-top: 80px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  margin: 0 auto;
+}
+
+body header nav #nav-links ul li {
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+  text-align: center;
+}
+
+body header nav #nav-links ul li a {
+  display: block;
+  padding: 16px 24px;
+}
+
+body header nav #nav-links ul li a.menu-btn {
+  color: #181818;
+  display: inline-block;
+  padding: 16px 24px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  font-size: inherit;
+  background-color: #F09C1F;
+  margin: 80px 0 0 0;
+}
+
+body header nav #nav-links ul li .active {
+  color: #F09C1F;
+}
+
+body header nav #nav-links ul li:hover {
+  color: #181818;
+}
+
+body .main {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: 1 / 1 / 2 / 4;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: inherit;
+      grid-template-columns: inherit;
+}
+
+body .main .index {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("/img/photos/two-burgers.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/img/photos/two-burgers.jpg");
+}
+
+body .main .general {
+  background-image: url("/img/photos/slate.jpg");
+}
+
+body .main .hero {
+  grid-column: 1 / -1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: inherit;
+      grid-template-columns: inherit;
+}
+
+body .main .title {
+  grid-column: 2 / -2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  row-gap: 40px;
+  padding-top: 112px;
+  padding-bottom: 40px;
+}
+
+body .main .content .catering,
+body .main .content .about,
+body .main .content .text,
+body .main .content .menu,
+body .main .content .photos {
+  grid-column: 1 / -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 32px;
+}
+
+body .main .content .catering h2,
+body .main .content .about h2,
+body .main .content .text h2,
+body .main .content .menu h2,
+body .main .content .photos h2 {
+  text-align: center;
+}
+
+body .main .content .catering p a,
+body .main .content .about p a,
+body .main .content .text p a,
+body .main .content .menu p a,
+body .main .content .photos p a {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #F09C1F;
+}
+
+body .main .content .catering #burgers,
+body .main .content .about #burgers,
+body .main .content .text #burgers,
+body .main .content .menu #burgers,
+body .main .content .photos #burgers {
+  background-image: url("/img/drawings/burger-black-opacity.png");
+  background-size: 50%;
+}
+
+body .main .content .catering #sandwiches,
+body .main .content .about #sandwiches,
+body .main .content .text #sandwiches,
+body .main .content .menu #sandwiches,
+body .main .content .photos #sandwiches {
+  background-image: url("/img/drawings/sandwich-black-opacity.png");
+  background-size: 50%;
+}
+
+body .main .content .catering #salater,
+body .main .content .about #salater,
+body .main .content .text #salater,
+body .main .content .menu #salater,
+body .main .content .photos #salater {
+  background-image: url("/img/drawings/salad-black-opacity.png");
+  background-size: 50%;
+}
+
+body .main .content .catering #drinks,
+body .main .content .about #drinks,
+body .main .content .text #drinks,
+body .main .content .menu #drinks,
+body .main .content .photos #drinks {
+  background-image: url("/img/drawings/drink-black-opacity.png");
+  background-size: auto 100%;
+}
+
+body .main .content .catering #burgers,
+body .main .content .catering #sandwiches,
+body .main .content .catering #salater,
+body .main .content .catering #kids,
+body .main .content .catering #sides,
+body .main .content .catering #extra,
+body .main .content .catering #drinks,
+body .main .content .about #burgers,
+body .main .content .about #sandwiches,
+body .main .content .about #salater,
+body .main .content .about #kids,
+body .main .content .about #sides,
+body .main .content .about #extra,
+body .main .content .about #drinks,
+body .main .content .text #burgers,
+body .main .content .text #sandwiches,
+body .main .content .text #salater,
+body .main .content .text #kids,
+body .main .content .text #sides,
+body .main .content .text #extra,
+body .main .content .text #drinks,
+body .main .content .menu #burgers,
+body .main .content .menu #sandwiches,
+body .main .content .menu #salater,
+body .main .content .menu #kids,
+body .main .content .menu #sides,
+body .main .content .menu #extra,
+body .main .content .menu #drinks,
+body .main .content .photos #burgers,
+body .main .content .photos #sandwiches,
+body .main .content .photos #salater,
+body .main .content .photos #kids,
+body .main .content .photos #sides,
+body .main .content .photos #extra,
+body .main .content .photos #drinks {
+  background-repeat: no-repeat;
+  background-position: right top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+body .main .content .catering #burgers h2,
+body .main .content .catering #burgers .sub,
+body .main .content .catering #burgers h3,
+body .main .content .catering #sandwiches h2,
+body .main .content .catering #sandwiches .sub,
+body .main .content .catering #sandwiches h3,
+body .main .content .catering #salater h2,
+body .main .content .catering #salater .sub,
+body .main .content .catering #salater h3,
+body .main .content .catering #kids h2,
+body .main .content .catering #kids .sub,
+body .main .content .catering #kids h3,
+body .main .content .catering #sides h2,
+body .main .content .catering #sides .sub,
+body .main .content .catering #sides h3,
+body .main .content .catering #extra h2,
+body .main .content .catering #extra .sub,
+body .main .content .catering #extra h3,
+body .main .content .catering #drinks h2,
+body .main .content .catering #drinks .sub,
+body .main .content .catering #drinks h3,
+body .main .content .about #burgers h2,
+body .main .content .about #burgers .sub,
+body .main .content .about #burgers h3,
+body .main .content .about #sandwiches h2,
+body .main .content .about #sandwiches .sub,
+body .main .content .about #sandwiches h3,
+body .main .content .about #salater h2,
+body .main .content .about #salater .sub,
+body .main .content .about #salater h3,
+body .main .content .about #kids h2,
+body .main .content .about #kids .sub,
+body .main .content .about #kids h3,
+body .main .content .about #sides h2,
+body .main .content .about #sides .sub,
+body .main .content .about #sides h3,
+body .main .content .about #extra h2,
+body .main .content .about #extra .sub,
+body .main .content .about #extra h3,
+body .main .content .about #drinks h2,
+body .main .content .about #drinks .sub,
+body .main .content .about #drinks h3,
+body .main .content .text #burgers h2,
+body .main .content .text #burgers .sub,
+body .main .content .text #burgers h3,
+body .main .content .text #sandwiches h2,
+body .main .content .text #sandwiches .sub,
+body .main .content .text #sandwiches h3,
+body .main .content .text #salater h2,
+body .main .content .text #salater .sub,
+body .main .content .text #salater h3,
+body .main .content .text #kids h2,
+body .main .content .text #kids .sub,
+body .main .content .text #kids h3,
+body .main .content .text #sides h2,
+body .main .content .text #sides .sub,
+body .main .content .text #sides h3,
+body .main .content .text #extra h2,
+body .main .content .text #extra .sub,
+body .main .content .text #extra h3,
+body .main .content .text #drinks h2,
+body .main .content .text #drinks .sub,
+body .main .content .text #drinks h3,
+body .main .content .menu #burgers h2,
+body .main .content .menu #burgers .sub,
+body .main .content .menu #burgers h3,
+body .main .content .menu #sandwiches h2,
+body .main .content .menu #sandwiches .sub,
+body .main .content .menu #sandwiches h3,
+body .main .content .menu #salater h2,
+body .main .content .menu #salater .sub,
+body .main .content .menu #salater h3,
+body .main .content .menu #kids h2,
+body .main .content .menu #kids .sub,
+body .main .content .menu #kids h3,
+body .main .content .menu #sides h2,
+body .main .content .menu #sides .sub,
+body .main .content .menu #sides h3,
+body .main .content .menu #extra h2,
+body .main .content .menu #extra .sub,
+body .main .content .menu #extra h3,
+body .main .content .menu #drinks h2,
+body .main .content .menu #drinks .sub,
+body .main .content .menu #drinks h3,
+body .main .content .photos #burgers h2,
+body .main .content .photos #burgers .sub,
+body .main .content .photos #burgers h3,
+body .main .content .photos #sandwiches h2,
+body .main .content .photos #sandwiches .sub,
+body .main .content .photos #sandwiches h3,
+body .main .content .photos #salater h2,
+body .main .content .photos #salater .sub,
+body .main .content .photos #salater h3,
+body .main .content .photos #kids h2,
+body .main .content .photos #kids .sub,
+body .main .content .photos #kids h3,
+body .main .content .photos #sides h2,
+body .main .content .photos #sides .sub,
+body .main .content .photos #sides h3,
+body .main .content .photos #extra h2,
+body .main .content .photos #extra .sub,
+body .main .content .photos #extra h3,
+body .main .content .photos #drinks h2,
+body .main .content .photos #drinks .sub,
+body .main .content .photos #drinks h3 {
+  text-align: center;
+}
+
+body .main .content .catering #burgers .entry,
+body .main .content .catering #sandwiches .entry,
+body .main .content .catering #salater .entry,
+body .main .content .catering #kids .entry,
+body .main .content .catering #sides .entry,
+body .main .content .catering #extra .entry,
+body .main .content .catering #drinks .entry,
+body .main .content .about #burgers .entry,
+body .main .content .about #sandwiches .entry,
+body .main .content .about #salater .entry,
+body .main .content .about #kids .entry,
+body .main .content .about #sides .entry,
+body .main .content .about #extra .entry,
+body .main .content .about #drinks .entry,
+body .main .content .text #burgers .entry,
+body .main .content .text #sandwiches .entry,
+body .main .content .text #salater .entry,
+body .main .content .text #kids .entry,
+body .main .content .text #sides .entry,
+body .main .content .text #extra .entry,
+body .main .content .text #drinks .entry,
+body .main .content .menu #burgers .entry,
+body .main .content .menu #sandwiches .entry,
+body .main .content .menu #salater .entry,
+body .main .content .menu #kids .entry,
+body .main .content .menu #sides .entry,
+body .main .content .menu #extra .entry,
+body .main .content .menu #drinks .entry,
+body .main .content .photos #burgers .entry,
+body .main .content .photos #sandwiches .entry,
+body .main .content .photos #salater .entry,
+body .main .content .photos #kids .entry,
+body .main .content .photos #sides .entry,
+body .main .content .photos #extra .entry,
+body .main .content .photos #drinks .entry {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 24px auto 48px;
+      grid-template-columns: 24px auto 48px;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+}
+
+body .main .content .catering #burgers .entry .number,
+body .main .content .catering #burgers .entry .name,
+body .main .content .catering #burgers .entry .price,
+body .main .content .catering #sandwiches .entry .number,
+body .main .content .catering #sandwiches .entry .name,
+body .main .content .catering #sandwiches .entry .price,
+body .main .content .catering #salater .entry .number,
+body .main .content .catering #salater .entry .name,
+body .main .content .catering #salater .entry .price,
+body .main .content .catering #kids .entry .number,
+body .main .content .catering #kids .entry .name,
+body .main .content .catering #kids .entry .price,
+body .main .content .catering #sides .entry .number,
+body .main .content .catering #sides .entry .name,
+body .main .content .catering #sides .entry .price,
+body .main .content .catering #extra .entry .number,
+body .main .content .catering #extra .entry .name,
+body .main .content .catering #extra .entry .price,
+body .main .content .catering #drinks .entry .number,
+body .main .content .catering #drinks .entry .name,
+body .main .content .catering #drinks .entry .price,
+body .main .content .about #burgers .entry .number,
+body .main .content .about #burgers .entry .name,
+body .main .content .about #burgers .entry .price,
+body .main .content .about #sandwiches .entry .number,
+body .main .content .about #sandwiches .entry .name,
+body .main .content .about #sandwiches .entry .price,
+body .main .content .about #salater .entry .number,
+body .main .content .about #salater .entry .name,
+body .main .content .about #salater .entry .price,
+body .main .content .about #kids .entry .number,
+body .main .content .about #kids .entry .name,
+body .main .content .about #kids .entry .price,
+body .main .content .about #sides .entry .number,
+body .main .content .about #sides .entry .name,
+body .main .content .about #sides .entry .price,
+body .main .content .about #extra .entry .number,
+body .main .content .about #extra .entry .name,
+body .main .content .about #extra .entry .price,
+body .main .content .about #drinks .entry .number,
+body .main .content .about #drinks .entry .name,
+body .main .content .about #drinks .entry .price,
+body .main .content .text #burgers .entry .number,
+body .main .content .text #burgers .entry .name,
+body .main .content .text #burgers .entry .price,
+body .main .content .text #sandwiches .entry .number,
+body .main .content .text #sandwiches .entry .name,
+body .main .content .text #sandwiches .entry .price,
+body .main .content .text #salater .entry .number,
+body .main .content .text #salater .entry .name,
+body .main .content .text #salater .entry .price,
+body .main .content .text #kids .entry .number,
+body .main .content .text #kids .entry .name,
+body .main .content .text #kids .entry .price,
+body .main .content .text #sides .entry .number,
+body .main .content .text #sides .entry .name,
+body .main .content .text #sides .entry .price,
+body .main .content .text #extra .entry .number,
+body .main .content .text #extra .entry .name,
+body .main .content .text #extra .entry .price,
+body .main .content .text #drinks .entry .number,
+body .main .content .text #drinks .entry .name,
+body .main .content .text #drinks .entry .price,
+body .main .content .menu #burgers .entry .number,
+body .main .content .menu #burgers .entry .name,
+body .main .content .menu #burgers .entry .price,
+body .main .content .menu #sandwiches .entry .number,
+body .main .content .menu #sandwiches .entry .name,
+body .main .content .menu #sandwiches .entry .price,
+body .main .content .menu #salater .entry .number,
+body .main .content .menu #salater .entry .name,
+body .main .content .menu #salater .entry .price,
+body .main .content .menu #kids .entry .number,
+body .main .content .menu #kids .entry .name,
+body .main .content .menu #kids .entry .price,
+body .main .content .menu #sides .entry .number,
+body .main .content .menu #sides .entry .name,
+body .main .content .menu #sides .entry .price,
+body .main .content .menu #extra .entry .number,
+body .main .content .menu #extra .entry .name,
+body .main .content .menu #extra .entry .price,
+body .main .content .menu #drinks .entry .number,
+body .main .content .menu #drinks .entry .name,
+body .main .content .menu #drinks .entry .price,
+body .main .content .photos #burgers .entry .number,
+body .main .content .photos #burgers .entry .name,
+body .main .content .photos #burgers .entry .price,
+body .main .content .photos #sandwiches .entry .number,
+body .main .content .photos #sandwiches .entry .name,
+body .main .content .photos #sandwiches .entry .price,
+body .main .content .photos #salater .entry .number,
+body .main .content .photos #salater .entry .name,
+body .main .content .photos #salater .entry .price,
+body .main .content .photos #kids .entry .number,
+body .main .content .photos #kids .entry .name,
+body .main .content .photos #kids .entry .price,
+body .main .content .photos #sides .entry .number,
+body .main .content .photos #sides .entry .name,
+body .main .content .photos #sides .entry .price,
+body .main .content .photos #extra .entry .number,
+body .main .content .photos #extra .entry .name,
+body .main .content .photos #extra .entry .price,
+body .main .content .photos #drinks .entry .number,
+body .main .content .photos #drinks .entry .name,
+body .main .content .photos #drinks .entry .price {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+body .main .content .catering #burgers .entry .number,
+body .main .content .catering #sandwiches .entry .number,
+body .main .content .catering #salater .entry .number,
+body .main .content .catering #kids .entry .number,
+body .main .content .catering #sides .entry .number,
+body .main .content .catering #extra .entry .number,
+body .main .content .catering #drinks .entry .number,
+body .main .content .about #burgers .entry .number,
+body .main .content .about #sandwiches .entry .number,
+body .main .content .about #salater .entry .number,
+body .main .content .about #kids .entry .number,
+body .main .content .about #sides .entry .number,
+body .main .content .about #extra .entry .number,
+body .main .content .about #drinks .entry .number,
+body .main .content .text #burgers .entry .number,
+body .main .content .text #sandwiches .entry .number,
+body .main .content .text #salater .entry .number,
+body .main .content .text #kids .entry .number,
+body .main .content .text #sides .entry .number,
+body .main .content .text #extra .entry .number,
+body .main .content .text #drinks .entry .number,
+body .main .content .menu #burgers .entry .number,
+body .main .content .menu #sandwiches .entry .number,
+body .main .content .menu #salater .entry .number,
+body .main .content .menu #kids .entry .number,
+body .main .content .menu #sides .entry .number,
+body .main .content .menu #extra .entry .number,
+body .main .content .menu #drinks .entry .number,
+body .main .content .photos #burgers .entry .number,
+body .main .content .photos #sandwiches .entry .number,
+body .main .content .photos #salater .entry .number,
+body .main .content .photos #kids .entry .number,
+body .main .content .photos #sides .entry .number,
+body .main .content .photos #extra .entry .number,
+body .main .content .photos #drinks .entry .number {
+  text-align: right;
+}
+
+body .main .content .catering #burgers .entry .price,
+body .main .content .catering #sandwiches .entry .price,
+body .main .content .catering #salater .entry .price,
+body .main .content .catering #kids .entry .price,
+body .main .content .catering #sides .entry .price,
+body .main .content .catering #extra .entry .price,
+body .main .content .catering #drinks .entry .price,
+body .main .content .about #burgers .entry .price,
+body .main .content .about #sandwiches .entry .price,
+body .main .content .about #salater .entry .price,
+body .main .content .about #kids .entry .price,
+body .main .content .about #sides .entry .price,
+body .main .content .about #extra .entry .price,
+body .main .content .about #drinks .entry .price,
+body .main .content .text #burgers .entry .price,
+body .main .content .text #sandwiches .entry .price,
+body .main .content .text #salater .entry .price,
+body .main .content .text #kids .entry .price,
+body .main .content .text #sides .entry .price,
+body .main .content .text #extra .entry .price,
+body .main .content .text #drinks .entry .price,
+body .main .content .menu #burgers .entry .price,
+body .main .content .menu #sandwiches .entry .price,
+body .main .content .menu #salater .entry .price,
+body .main .content .menu #kids .entry .price,
+body .main .content .menu #sides .entry .price,
+body .main .content .menu #extra .entry .price,
+body .main .content .menu #drinks .entry .price,
+body .main .content .photos #burgers .entry .price,
+body .main .content .photos #sandwiches .entry .price,
+body .main .content .photos #salater .entry .price,
+body .main .content .photos #kids .entry .price,
+body .main .content .photos #sides .entry .price,
+body .main .content .photos #extra .entry .price,
+body .main .content .photos #drinks .entry .price {
+  text-align: right;
+}
+
+body .main .content .photos {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+body .main .content .photos .hori {
+  width: 100%;
+  max-width: 400px;
+  max-height: 100%;
+}
+
+body .main .content .photos .verti {
+  width: 100%;
+  max-width: 320px;
+  max-height: 100%;
+}
+
+body .main .content .contact {
+  grid-column: 1 / -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+body .main .content .contact .hours,
+body .main .content .contact .address,
+body .main .content .contact .mail,
+body .main .content .contact .phone {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content max-content;
+      grid-template-columns: -webkit-max-content -webkit-max-content;
+      grid-template-columns: max-content max-content;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+}
+
+body .main .content .contact .hours .icon,
+body .main .content .contact .address .icon,
+body .main .content .contact .mail .icon,
+body .main .content .contact .phone .icon {
+  padding-top: 4px;
+}
+
+body .main .content .contact .hours .icon svg,
+body .main .content .contact .address .icon svg,
+body .main .content .contact .mail .icon svg,
+body .main .content .contact .phone .icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+body .main .content .contact .hours .info,
+body .main .content .contact .address .info,
+body .main .content .contact .mail .info,
+body .main .content .contact .phone .info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: inherit;
+      grid-template-columns: inherit;
+  -webkit-column-gap: 24px;
+          column-gap: 24px;
+}
+
+body .main .content .contact .hours .info h4,
+body .main .content .contact .address .info h4,
+body .main .content .contact .mail .info h4,
+body .main .content .contact .phone .info h4 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+}
+
+body .main .content .contact .hours .info .time,
+body .main .content .contact .address .info .time,
+body .main .content .contact .mail .info .time,
+body .main .content .contact .phone .info .time {
+  text-align: right;
+}
+
+body .main .content .map {
+  grid-column: 1 / -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer {
+  background-color: #181818;
+  color: #E7E7E7;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: 2 / 1 / 3 / 4;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: inherit;
+      grid-template-columns: inherit;
+}
+
+body footer .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+
+body footer p {
+  text-align: center;
+}
+
+body footer #footer-logo {
+  width: auto;
+  height: 80px;
+  margin: 0 auto;
+}
+
+body footer nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body footer nav a {
+  margin: 0 20px;
+}
+
+body footer nav a svg {
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    -ms-grid-columns: minmax(80px, 1fr) minmax(560px, 784px) minmax(80px, 1fr);
+        grid-template-columns: minmax(80px, 1fr) minmax(560px, 784px) minmax(80px, 1fr);
+  }
+  body h1 {
+    font-size: 4rem;
+  }
+  body h2 {
+    font-size: 2.5rem;
+  }
+  body h3 {
+    font-size: 2rem;
+  }
+  body .buttons .primary-btn,
+  body .buttons .secondary-btn {
+    font-size: 1.5rem;
+  }
+  body .main .content {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  body .main .content .catering,
+  body .main .content .contact {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+  }
+  body .main .content .about,
+  body .main .content .map {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3 / 5;
+  }
+  body .main .content .text {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  body .main .content .photos {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2 / 4;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: inherit;
+        grid-template-columns: inherit;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+    row-gap: 0;
+  }
+  body .main .content .photos .first {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-area: 1 / 1 / 3 / -2;
+    place-self: start;
+    z-index: 2;
+    max-width: 100%;
+  }
+  body .main .content .photos .second {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-area: 2 / -3 / 4 / -1;
+    place-self: end;
+    z-index: 1;
+    max-width: 100%;
+  }
+  body footer .content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body footer nav a svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 125%;
+  }
+  body {
+    -ms-grid-columns: minmax(80px, 1fr) minmax(840px, 1200px) minmax(80px, 1fr);
+        grid-template-columns: minmax(80px, 1fr) minmax(840px, 1200px) minmax(80px, 1fr);
+  }
+  body header {
+    font-size: 1rem;
+  }
+  body header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 24px 0;
+  }
+  body header nav #nav-icons {
+    display: block;
+  }
+  body header nav #nav-icons #mobile-icons {
+    display: none;
+  }
+  body header nav #nav-links {
+    height: auto;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    -webkit-transition: 0s;
+    transition: 0s;
+  }
+  body header nav #nav-links ul {
+    padding-top: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body header nav #nav-links ul li {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  body header nav #nav-links ul li a {
+    padding: 12px 16px;
+  }
+  body header nav #nav-links ul li a.menu-btn {
+    margin: 0 0 0 24px;
+    padding: 12px 16px;
+  }
+  body .main .content {
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
+    gap: 40px;
+  }
+  body .main .content .text,
+  body .main .content .catering,
+  body .main .content .contact {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2 / 4;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  body .main .content .photos,
+  body .main .content .about,
+  body .main .content .map {
+    grid-column: 4 / -2;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  body .main .content .menu {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: inherit;
+        grid-template-columns: inherit;
+    -ms-grid-rows: min-content min-content min-content auto;
+        grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content auto;
+        grid-template-rows: min-content min-content min-content auto;
+    gap: 40px;
+  }
+  body .main .content .menu #burgers {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 4;
+    grid-row: 1 / 5;
+  }
+  body .main .content .menu #sandwiches {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3 / 5;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  body .main .content .menu #salater {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 2;
+    grid-column: 5 / 7;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  body .main .content .menu #kids {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3 / 5;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  body .main .content .menu #extra {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 2;
+    grid-column: 5 / 7;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  body .main .content .menu #sides {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3 / 5;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  body .main .content .menu #drinks {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 2;
+    grid-column: 5 / 7;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+}
